@@ -1,0 +1,164 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>BO2-RTM-GDK</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>14.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="NameIcons.json" />
+    <None Remove="Bo2ToolsCamos.json" />
+    <None Remove="StatNames.json" />
+    <None Remove="StatProfile.json" />
+    <None Remove="Translations.json" />
+    <EmbeddedResource Include="NameIcons.json" LogicalName="NameIcons.json" />
+    <EmbeddedResource Include="Bo2ToolsCamos.json" LogicalName="Bo2ToolsCamos.json" />
+    <EmbeddedResource Include="StatNames.json" LogicalName="StatNames.json" />
+    <EmbeddedResource Include="StatProfile.json" LogicalName="StatProfile.json" />
+    <EmbeddedResource Include="Translations.json" LogicalName="Translations.json" />
+    <ApplicationDefinition Remove="BO2_RTM_GDK\App.xaml" />
+    <ApplicationDefinition Include="BO2_RTM_GDK\App.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="app.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\AuthWindow.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\ClanTagTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\GscTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\InfectionTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\ListenerTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\LogsTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\MessageTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\NameTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\ProgressTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\RecordsTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\RelayTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\StatsTab.xaml" />
+    <Page Remove="BO2_RTM_GDK.Views\UnlocksTab.xaml" />
+    <Page Remove="BO2_RTM_GDK\MainWindow.xaml" />
+    <Page Remove="themes\theme.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\AuthWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/authwindow.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\ClanTagTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/clantagtab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\GscTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/gsctab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\InfectionTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/infectiontab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\ListenerTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/listenertab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\LogsTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/logstab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\MessageTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/messagetab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\NameTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/nametab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\ProgressTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/progresstab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\RecordsTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/recordstab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\RelayTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/relaytab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\StatsTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/statstab.xaml" />
+    <Page Include="BO2_RTM_GDK.Views\UnlocksTab.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="views/unlockstab.xaml" />
+    <Page Include="BO2_RTM_GDK\MainWindow.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="mainwindow.xaml" />
+    <Page Include="themes\theme.xaml" Generator="MSBuild:Compile" SubType="Designer" LogicalName="themes/theme.xaml" />
+    <Resource Remove="resources\app.ico" />
+    <Resource Include="resources\app.ico" LogicalName="resources/app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Net.WebHeaderCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Runtime.Serialization.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Runtime.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.ObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Diagnostics.Process.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Runtime.Serialization.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.HttpListener">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Net.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.WebClient">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Net.WebClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.ServicePoint">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Net.ServicePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Net.Requests.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Runtime.Serialization.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Collections.NonGeneric.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.ComponentModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Private.CoreLib">
+      <HintPath>..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\8.0.31\System.Private.CoreLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
